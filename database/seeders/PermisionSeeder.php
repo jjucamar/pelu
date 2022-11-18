@@ -27,8 +27,19 @@ class PermisionSeeder extends Seeder
         Permission::create(['name'=>'roles.destroy','privilege'=>'role delete']);
         Permission::create(['name'=>'roles.show','privilege'=>'role view']);
 
+        
+        ///Permisos de usuer
+
+        Permission::create(['name'=>'users.index','privilege'=>'user list']);
+        Permission::create(['name'=>'users.create','privilege'=>'user create']);
+        Permission::create(['name'=>'users.store','privilege'=>'user create']);
+        Permission::create(['name'=>'users.edit','privilege'=>'user edit']);
+        Permission::create(['name'=>'users.update','privilege'=>'user edit']);
+        Permission::create(['name'=>'users.destroy','privilege'=>'user delete']);
+        Permission::create(['name'=>'users.show','privilege'=>'user view']);
+
         /* Creamos una variable  */
-        $permissons=([1,2,3,4,5,6,7,8]);
+        $permissons=([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]);
        /*  ahora llamamos a los roles  */
        $superAdmin = Role::findByName('super-admin');
        $admin = Role::findByName('admin');

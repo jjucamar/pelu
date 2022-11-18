@@ -1,7 +1,8 @@
 {{-- Array del link de navegacion con sus item --}}
 @php
 ($navLinks= [ 
-    ['name'=>'Roles','route'=>route('roles.index'), 'active' =>request()->routeIs('roles.index')],    
+    ['name'=>'Roles','route'=>route('roles.index'), 'active' =>request()->routeIs('roles.index')], 
+    ['name'=>'users','route'=>route('users.index'),'active'=>request()->routeIs('users.index')],   
 ]);
     
 @endphp

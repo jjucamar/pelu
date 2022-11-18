@@ -79,7 +79,7 @@
     });
 setTimeout(function(){
     $('#alert').remove()
-},3000)
+},3500)
 
 } );
     </script>

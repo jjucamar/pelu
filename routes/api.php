@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +18,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+// esta ruta nos va a dar los usuarios
+Route::get('users',function (Request $request){
+    return datatables(User::with('roles'))
+    ->addColumn('btn','admin.users.actions')
+    ->rawColumns(['btn'])
+    ->toJson();
+   
+
+   
+  
+    
+
+
 });
