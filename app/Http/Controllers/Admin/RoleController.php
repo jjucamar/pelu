@@ -47,7 +47,7 @@ class RoleController extends Controller
         $title = "role create";
         $btn = "create";
         $permissions_id = [];
-        return view('admin.roles.create', compact('permissions', 'role', 'btn', 'permissions_id', 'title'));
+        return view('admin.roles.create', compact('permissions', 'role', 'btn', 'permissions_id', 'title'))->with('success','Actualizado22 correctamente');;
     }
 
     /**

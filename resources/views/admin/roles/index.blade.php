@@ -86,11 +86,11 @@
       }]
 
     });
-setTimeout(function(){
-    $('#alert').remove()
-},300)
+    setTimeout(function(){
+        $('#alert').remove()
+    },400)
 
-} );
+    } );
     </script>
 
     @endpush

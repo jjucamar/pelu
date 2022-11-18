@@ -40,6 +40,9 @@
 
             <!-- Page Content -->
             <main>
+              {{--   Para mostrar las alerta del update y otros --}}
+                <x-flash-messages/>>
+                
                 {{ $slot }}
             </main>
         </div>
