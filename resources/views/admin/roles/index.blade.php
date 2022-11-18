@@ -79,9 +79,14 @@
 
     <script>
         $(document).ready(function() {
+           /*  Dentro del DataTable para configurar el 
+            el jquery de las tablas datatables */
     $('#role').DataTable({
       "columnDefs": [{
+          /* el numero de la columna comienza en 0 [2] */
           "targets":[2],
+          /* como es el de los iconos de ver editar y borrar
+          no nos interesa que ejecute ninguna acción */
           "orderable":false
       }]
 
