@@ -68,7 +68,9 @@ class RoleController extends Controller
         if (count($permissions) > 0) {
             $role->syncPermissions($permissions);
         }
-        return redirect()->route('roles.index');
+        return redirect()->route('roles.index')  ->with('success', 'Rol creado con exito');
+     
+
 
     }
 

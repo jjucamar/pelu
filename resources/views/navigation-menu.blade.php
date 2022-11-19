@@ -3,6 +3,8 @@
 ($navLinks= [ 
     ['name'=>'Roles','route'=>route('roles.index'), 'active' =>request()->routeIs('roles.index')], 
     ['name'=>'users','route'=>route('users.index'),'active'=>request()->routeIs('users.index')],   
+    ['name'=>'specialties','route'=>route('specialties.index'),'active'=>request()->routeIs('specialties.index')],   
+
 ]);
     
 @endphp

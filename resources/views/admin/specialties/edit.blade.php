@@ -6,8 +6,8 @@
             <form action="{{ route('specialties.update',$specialty->id)}}" method="POST">
                 @method('PUT')
                 @csrf
-                <input type="hidden" name="id" value="{{ $specialty->id}}"
-               @include('admin.specialties.partials.form')
+                <input type="hidden" name="id" value="{{$specialty->id}}">
+                @include('admin.specialties.partials.form')
             </form>
         </div>
     </div>

@@ -119,7 +119,7 @@
                         confirmButtonText: 'Yes, delete it!'
                     }).then((result) => {
                         if (result.isConfirmed) {
-                         this.submit()
+                        this.submit()
                         }
 
 

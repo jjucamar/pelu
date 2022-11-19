@@ -40,8 +40,8 @@
 
             <!-- Page Content -->
             <main>
-              {{--   Para mostrar las alerta del update y otros --}}
-                <x-flash-messages/>>
+                {{--   Para mostrar las alerta del update y otros --}}
+                <x-flash-messages/>
                 
                 {{ $slot }}
             </main>
@@ -49,7 +49,7 @@
 
         @stack('modals')
 
-       
+        
 
         @livewireScripts
 
