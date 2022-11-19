@@ -1,7 +1,8 @@
 <x-admin-layout>
+    {{-- fuentes del div https://v1.tailwindcss.com/components/cards --}}
     <div class="container">
         <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-6">
-            <img class="w-full" src="{{ asset('assets/disases.jpg') }}" alt="Sunset in the mountains">
+            <img class="w-full" src="{{ asset('assets/Peluqueria_640px.jpg') }}" alt="Sunset in the mountains">
             <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">{{ $specialty->name }}</div>
                 <p class="text-gray-700 text-base">
@@ -14,5 +15,5 @@
             </div>
         </div>
     </div>
-    </div>
+    
 </x-admin-layout>
