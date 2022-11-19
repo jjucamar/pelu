@@ -54,7 +54,7 @@
                                                 d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                         </svg>
                                     </a>
-
+                                    {{-- Le agregamos la clase formDelete para utilizarla al final  --}}
                                     <form action="{{ route('specialties.destroy', $specialtie->id) }}" method="POST"
                                         class="text-red-600 formDelete">
                                         @csrf
@@ -85,6 +85,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
+        {{--  Para el manejo de errores Fuente https://sweetalert2.github.io/#download --}}
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <script>
@@ -105,18 +106,18 @@
                 }, 3000)
 
 
-                ///
+                /// esta es la clase que utilizamos arriba
 
                 $('.formDelete').submit(function(e) {
                     e.preventDefault()
                     Swal.fire({
-                        title: 'Are you sure?',
-                        text: "You won't be able to revert this!",
+                        title: 'Esta usted Seguro?',
+                        text: "No se puede revertir la acción!",
                         icon: 'warning',
                         showCancelButton: true,
                         confirmButtonColor: '#3085d6',
                         cancelButtonColor: '#d33',
-                        confirmButtonText: 'Yes, delete it!'
+                        confirmButtonText: 'Si, Borrarla!'
                     }).then((result) => {
                         if (result.isConfirmed) {
                         this.submit()

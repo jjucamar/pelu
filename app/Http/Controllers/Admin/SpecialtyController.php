@@ -128,12 +128,14 @@ class SpecialtyController extends Controller
      */
     public function destroy(Specialty $specialty)
     {
-        if($specialty->id>71){
+        /*  Se pone el numero 7 porque esas son las primeras que no queremos que se 
+        borren */
+        if($specialty->id>7){
             $specialty->delete();
-        return redirect()->route('specialties.index')->with('success', 'Specialty deleted');
+        return redirect()->route('specialties.index')->with('success', 'Especialidad borrada con exito');
 
         }else{
-        return redirect()->route('specialties.index')->with('fail', 'Specialty is no deleted');
+        return redirect()->route('specialties.index')->with('fail', 'Especialidad no se pudo borro');
 
         }
 
